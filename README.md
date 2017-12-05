@@ -8,7 +8,7 @@
 * **JPA:** Java Persistence API. Specification that defines the Annotations and and Implementations that make ORM possible
 * **Hibernate:** Object Relational Mapping (ORM) Framework which Implements JPA, and is used by Spring Data within the Spring Framework. Used to map Data Transfer Objects (DTO) and Plain Old Java Objects (POJOs) written in Java to a Relational Database
 
-#### Database Details:
+#### Database Details
 
 ```
 Table "public.movie"
