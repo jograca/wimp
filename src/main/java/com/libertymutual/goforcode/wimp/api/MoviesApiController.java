@@ -40,16 +40,16 @@ public class MoviesApiController {
 		return movieRepo.findAll();
 	}
 
+	@GetMapping("{id}")
+	@ResponseStatus(code = HttpStatus.OK)
+	public Movie getOne(@PathVariable Long id) {
+		return movieRepo.findOne(id);
+	}
+
 	@PostMapping("")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public Movie create(@RequestBody Movie movie) {
 		return movieRepo.save(movie);
-	}
-
-	@GetMapping("{id}")
-	@ResponseStatus(code = HttpStatus.OK)
-	public Movie getMovie(@PathVariable Long id) {
-		return movieRepo.findOne(id);
 	}
 
 	@PutMapping("{id}")

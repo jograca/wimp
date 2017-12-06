@@ -46,7 +46,7 @@ public class ActorsApiController {
 
 	@GetMapping("{id}")
 	@ResponseStatus(code = HttpStatus.OK)
-	public Actor getActor(@PathVariable Long id) {
+	public Actor getOne(@PathVariable Long id) {
 		return actorRepo.findOne(id);
 	}
 
