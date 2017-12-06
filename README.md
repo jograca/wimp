@@ -11,9 +11,9 @@
 #### Database Details
 
 ```
-Table "public.movie"
-Column    |            Type             | Collation | Nullable | Default
---------------+-----------------------------+-----------+----------+---------
+                              Table "public.movie"
+Column       |            Type             | Collation | Nullable | Default
+-------------+-----------------------------+-----------+----------+---------
 id           | bigint                      |           | not null |
 budget       | bigint                      |           |          |
 distributor  | character varying(500)      |           | not null |
@@ -22,6 +22,7 @@ title        | character varying(300)      |           | not null |
 Indexes:
 "movie_pkey" PRIMARY KEY, btree (id)
 ```
+
 
 ```
                                Table "public.actor"
