@@ -14,4 +14,6 @@ public interface ActorRepository extends JpaRepository<Actor, Long> {
 
 	List<Actor> findByActiveSinceYearLessThanEqual(Long activeSinceYear);
 
+	List<Actor> findByFirstNameIgnoringCase(String firstName);
+
 }

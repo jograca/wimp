@@ -18,9 +18,11 @@ public class SeedData {
 		actorRepo.save(new Actor("John", "Cusack", (long) 1983, new Date(1966, 6, 28)));
 		actorRepo.save(new Actor("Catherine", "Zeta-Jones", (long) 1995, new Date(1990, 9, 25)));
 		actorRepo.save(new Actor("Iben", "Hjejle", (long) 1992, new Date(1971, 3, 22)));
+		actorRepo.save(new Actor("Joan", "Cusack", (long) 1979, new Date(1962, 10, 11)));
 
 		movieRepo.save(new Movie("High Fidelity", new Date(2000, 3, 31), (long) 30000000, "Touchstone"));
 		movieRepo.save(new Movie("Coyote Ugly", new Date(2000, 8, 4), (long) 45000000, "Touchstone"));
+		movieRepo.save(new Movie("The Muppet Movie", new Date(1979, 6, 22), null, "ITC Films"));
 
 	}
 }
