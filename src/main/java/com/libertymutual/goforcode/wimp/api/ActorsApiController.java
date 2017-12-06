@@ -29,8 +29,11 @@ public class ActorsApiController {
 
 	@GetMapping("")
 	@ResponseStatus(code = HttpStatus.OK)
-	public List<Actor> getAll(@RequestParam(required = false) String lastName,
-			@RequestParam(required = false) Long activeSinceYear) {
+	public List<Actor> getAll(@RequestParam(required = false) String firstName,
+			@RequestParam(required = false) String lastName, @RequestParam(required = false) Long activeSinceYear) {
+		if (firstName != null) {
+			return actorRepo.findByFirstNameIgnoringCase(firstName);
+		}
 		if (lastName != null) {
 			return actorRepo.findByLastNameIgnoringCase(lastName);
 		}
