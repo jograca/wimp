@@ -20,6 +20,7 @@ public class SeedData {
 		actorRepo.save(new Actor("Iben", "Hjejle", (long) 1992, new Date(1971, 3, 22)));
 
 		movieRepo.save(new Movie("High Fidelity", new Date(2000, 3, 31), (long) 30000000, "Touchstone"));
+		movieRepo.save(new Movie("Coyote Ugly", new Date(2000, 8, 4), (long) 45000000, "Touchstone"));
 
 	}
 }
