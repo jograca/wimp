@@ -36,3 +36,34 @@ Indexes:
 Indexes:
     "actor_pkey" PRIMARY KEY, btree (id)
 ```
+
+#### Available Queries
+
+**Actor**
+
+Query By Last Name:
+```
+../actors/api?lastName=
+```
+
+Query By First Name:
+```
+../actors/api?firstName=
+```
+
+Active Since Year - shows all Actors that started Acting on or before the selected year
+```
+../actors/activeSinceYear=
+```
+
+**Movie**
+
+Query By Movie Title:
+```
+../movies/api?title=
+```
+
+Query By Movie Distributor:
+```
+../movies/api?distributor=
+```
