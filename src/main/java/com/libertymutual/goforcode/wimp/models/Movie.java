@@ -35,8 +35,7 @@ public class Movie {
 
 	}
 
-	public Movie(Long id, String title, Date releaseDate, Long budget, String distributor) {
-		this.id = id;
+	public Movie(String title, Date releaseDate, Long budget, String distributor) {
 		this.title = title;
 		this.releaseDate = releaseDate;
 		this.budget = budget;
