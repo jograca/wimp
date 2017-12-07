@@ -1,14 +1,18 @@
 package com.libertymutual.goforcode.wimp.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "actor")
@@ -18,6 +22,10 @@ public class Actor {
 	@GeneratedValue(generator = "actor_id_seq", strategy = GenerationType.AUTO)
 	@SequenceGenerator(name = "actor_id_seq", sequenceName = "actor_id_seq")
 	private Long id;
+
+	@ManyToMany(mappedBy = "actors")
+	@JsonIgnore
+	private List<Movie> movies;
 
 	@Column(length = 75, nullable = false)
 	private String firstName;
@@ -80,6 +88,14 @@ public class Actor {
 
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public List<Movie> getMovies() {
+		return movies;
+	}
+
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
 	}
 
 }
