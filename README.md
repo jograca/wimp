@@ -67,3 +67,5 @@ Query By Movie Distributor:
 ```
 ../movies/api?distributor=
 ```
+
+**New**
