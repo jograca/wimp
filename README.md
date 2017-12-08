@@ -10,7 +10,7 @@
 
 #### Deployment Details
 
-Deployed to Heroku here as a Java project here:
+Deployed to Heroku here as a Java project:
 
 https://wimp-app-jon-g4c-indy-nov-herokuapp.com
 
