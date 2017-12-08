@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -26,6 +27,9 @@ public class Actor {
 	@ManyToMany(mappedBy = "actors")
 	@JsonIgnore
 	private List<Movie> movies;
+
+	@OneToMany(mappedBy = "actor")
+	private List<Award> awards;
 
 	@Column(length = 75, nullable = false)
 	private String firstName;
@@ -96,6 +100,14 @@ public class Actor {
 
 	public void setMovies(List<Movie> movies) {
 		this.movies = movies;
+	}
+
+	public List<Award> getAwards() {
+		return awards;
+	}
+
+	public void setAwards(List<Award> awards) {
+		this.awards = awards;
 	}
 
 }

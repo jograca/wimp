@@ -1,8 +1,11 @@
 package com.libertymutual.goforcode.wimp.api;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.libertymutual.goforcode.wimp.models.Actor;
+import com.libertymutual.goforcode.wimp.models.Movie;
 
 public class ActorView {
 
@@ -30,5 +33,13 @@ public class ActorView {
 
 	public Date getBirthDate() {
 		return actor.getBirthDate();
+	}
+
+	public List<MovieView> getMovies() {
+		ArrayList<MovieView> views = new ArrayList<MovieView>();
+		for (Movie movie : actor.getMovies()) {
+			views.add(new MovieView(movie));
+		}
+		return views;
 	}
 }

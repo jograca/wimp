@@ -10,38 +10,38 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.libertymutual.goforcode.wimp.models.Actor;
-import com.libertymutual.goforcode.wimp.models.Movie;
+import com.libertymutual.goforcode.wimp.models.Award;
 import com.libertymutual.goforcode.wimp.services.ActorRepository;
-import com.libertymutual.goforcode.wimp.services.MovieRepository;
+import com.libertymutual.goforcode.wimp.services.AwardRepository;
 
 @RestController
-@RequestMapping("/api/movies/{movieId}/actors")
-public class StarsApiController {
+@RequestMapping("/api/actors/{actorId}/awards")
+public class AwardsApiController {
 
+	private AwardRepository awardRepo;
 	private ActorRepository actorRepo;
-	private MovieRepository movieRepo;
 
-	public StarsApiController(ActorRepository actorRepo, MovieRepository movieRepo) {
+	public AwardsApiController(AwardRepository awardRepo, ActorRepository actorRepo) {
+		this.awardRepo = awardRepo;
 		this.actorRepo = actorRepo;
-		this.movieRepo = movieRepo;
 	}
 
 	@GetMapping("{id}")
-	public Actor getOne(@PathVariable long id) {
-		return actorRepo.findOne(id);
+	public Award getOne(@PathVariable long id) {
+		return awardRepo.findOne(id);
 	}
 
 	@PostMapping("")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public Movie create(@PathVariable Long movieId, @RequestBody Long actorId) {
+	public Actor create(@PathVariable Long actorId, @RequestBody Long awardId) {
 
-		Movie movie = movieRepo.findOne(movieId);
 		Actor actor = actorRepo.findOne(actorId);
+		Award award = awardRepo.findOne(awardId);
 
-		if (!movie.getActors().contains(actor)) {
-			movie.getActors().add(actor);
-			movieRepo.save(movie);
-		}
-		return movie;
+		actor.getAwards().add(award);
+		actorRepo.save(actor);
+		// awardRepo.save(award);
+
+		return actor;
 	}
 }
