@@ -12,7 +12,7 @@
 
 Deployed to Heroku here as a Java project:
 
-https://wimp-app-jon-g4c-indy-nov-herokuapp.com
+https://wimp-app-jon-g4c-indy-nov.herokuapp.com
 
 #### Database Details
 
