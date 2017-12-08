@@ -38,14 +38,11 @@ public class AwardsApiController {
 		Actor actor = actorRepo.findOne(actorId);
 		Award award = awardRepo.findOne(awardId);
 
-		System.out.println(award.getTitle());
-		System.out.println(actor.getLastName());
-
 		actor.getAwards().add(award);
 		award.setActor(actor);
 
 		actorRepo.save(actor);
-		awardRepo.save(award);
+		// awardRepo.save(award);
 
 		return actor;
 	}
