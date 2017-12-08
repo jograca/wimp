@@ -33,12 +33,10 @@ public class AwardsApiController {
 
 	@PostMapping("")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public Actor create(@PathVariable Long actorId, @RequestBody Long awardId) {
-
+	public Actor create(@PathVariable Long actorId, @RequestBody Award award) {
 		Actor actor = actorRepo.findOne(actorId);
-		Award award = awardRepo.findOne(awardId);
-
 		award.setActor(actor);
+		awardRepo.save(award);
 		actorRepo.save(actor);
 
 		return actor;
