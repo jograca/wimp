@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "award")
 public class Award {
@@ -19,6 +21,7 @@ public class Award {
 	private Long id;
 
 	@ManyToOne
+	@JsonIgnore
 	private Actor actor;
 
 	@Column(length = 500, nullable = false)
@@ -35,7 +38,6 @@ public class Award {
 	}
 
 	public Award(String title, String organization, int year) {
-		super();
 		this.title = title;
 		this.organization = organization;
 		this.year = year;
