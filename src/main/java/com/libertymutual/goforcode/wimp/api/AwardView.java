@@ -1,6 +1,5 @@
 package com.libertymutual.goforcode.wimp.api;
 
-import com.libertymutual.goforcode.wimp.models.Actor;
 import com.libertymutual.goforcode.wimp.models.Award;
 
 public class AwardView {
@@ -25,10 +24,6 @@ public class AwardView {
 
 	public int getYear() {
 		return award.getYear();
-	}
-
-	public Actor getActor() {
-		return award.getActor();
 	}
 
 }

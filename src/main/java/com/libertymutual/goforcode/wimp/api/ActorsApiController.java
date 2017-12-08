@@ -41,25 +41,11 @@ public class ActorsApiController {
 
 	@GetMapping("{id}")
 	@ResponseStatus(code = HttpStatus.OK)
-	public List<ActorView> getOne(@PathVariable Long id) {
+	public ActorView getOne(@PathVariable Long id) {
 		Actor actor = actorRepo.findOne(id);
-		ArrayList<ActorView> actorViews = new ArrayList<ActorView>();
-		actorViews.add(new ActorView(actor));
 
-		return actorViews;
+		return new ActorView(actor);
 	}
-
-	// @GetMapping("{id}")
-	// @ResponseStatus(code = HttpStatus.OK)
-	// public Actor getOne(@PathVariable Long id) {
-	// List<Actor> actors = actorRepo.findAll();
-	// ArrayList<ActorView> actorViews = new ArrayList<ActorView>();
-	//
-	// for (Actor actor : actors) {
-	// actorViews.add(new ActorView(actor));
-	// }
-	// return actorRepo.findOne(id);
-	// }
 
 	@PostMapping("")
 	@ResponseStatus(code = HttpStatus.CREATED)
