@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.libertymutual.goforcode.wimp.models.Actor;
+import com.libertymutual.goforcode.wimp.models.Award;
 import com.libertymutual.goforcode.wimp.models.Movie;
 
 public class ActorView {
@@ -39,6 +40,14 @@ public class ActorView {
 		ArrayList<MovieView> views = new ArrayList<MovieView>();
 		for (Movie movie : actor.getMovies()) {
 			views.add(new MovieView(movie));
+		}
+		return views;
+	}
+
+	public List<AwardView> getAwards() {
+		ArrayList<AwardView> views = new ArrayList<AwardView>();
+		for (Award award : actor.getAwards()) {
+			views.add(new AwardView(award));
 		}
 		return views;
 	}
