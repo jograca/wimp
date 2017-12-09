@@ -8,6 +8,15 @@ Deployed to Heroku here as a Java project:
 
 https://wimp-app-jon-g4c-indy-nov.herokuapp.com
 
+Here's what Heroku does (I think)
+
+* Gathers your code from your Git repository
+* Reads your <<pom.xml>> and builds your App based on those details
+* Creates a container with your build
+* Takes your container and deploys it to their ecosystem
+* Your container is considered ephemeral, and will be removed by Heroku if not in active use (A Good Thing). There are probably overrides or whatever
+* The Container Ecosystem Heroku uses deploys your container to their service running on an AWS EC2 instance
+
 #### Functionality:
 
 * Add an Actor to a Movie:
