@@ -2,12 +2,6 @@
 
 ### G4C Homework Project for Week 5
 
-#### Definitions
-
-* **PostgreSQL:** Relational (Structured) Database
-* **JPA:** Java Persistence API. Specification that defines the Annotations and and Implementations that make ORM possible
-* **Hibernate:** Object Relational Mapping (ORM) Framework which Implements JPA, and is used by Spring Data within the Spring Framework. Used to map Data Transfer Objects (DTO) and Plain Old Java Objects (POJOs) written in Java to a Relational Database
-
 #### Deployment Details
 
 Deployed to Heroku here as a Java project:
@@ -27,3 +21,9 @@ https://wimp-app-jon-g4c-indy-nov.herokuapp.com
 
 * See Actors and Movies with Awards
 * GET to ```/api/movies/{id}```
+
+#### Footnote - Definitions
+
+* **PostgreSQL:** Relational (Structured) Database
+* **JPA:** Java Persistence API. Specification that defines the Annotations and and Implementations that make ORM possible
+* **Hibernate:** Object Relational Mapping (ORM) Framework which Implements JPA, and is used by Spring Data within the Spring Framework. Used to map Data Transfer Objects (DTO) and Plain Old Java Objects (POJOs) written in Java to a Relational Database
