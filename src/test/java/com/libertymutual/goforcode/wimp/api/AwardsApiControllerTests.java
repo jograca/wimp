@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import com.libertymutual.goforcode.wimp.models.Actor;
 import com.libertymutual.goforcode.wimp.models.Award;
 import com.libertymutual.goforcode.wimp.services.ActorRepository;
 import com.libertymutual.goforcode.wimp.services.AwardRepository;
@@ -56,28 +57,19 @@ public class AwardsApiControllerTests {
 		verify(awardRepo).findOne(1L);
 	}
 
-	// @Test
-	// public void
-	// create_associates_the_award_with_an_actor_saves_the_award_and_actor_and_returns_actor()
-	// {
-	// // Arrange
-	// Actor actor = new Actor();
-	// // Set a blank Array of Awards
-	// actor.setAwards(new ArrayList<Award>());
-	// Award award = new Award();
-	// when(awardRepo.findOne(1L)).thenReturn(award);
-	// when(actorRepo.findOne(2L)).thenReturn(actor);
-	//
-	// // Act
-	// Actor actual = controller.create(2L, award);
-	//
-	// // Assert
-	// assertThat(actual).isSameAs(actor);
-	// verify(award.getActor().equals(actor));
-	//
-	// // assertThat(actor.getAwards()).contains(award);
-	//
-	// // verify(awardRepo).findOne(1L);
-	// // verify(actorRepo.findOne(2L).getAwards().contains(controller.getOne(1L)));
-	// }
+	@Test
+	public void create_associates_the_award_with_an_actor_saves_the_award_and_actor_and_returns_actor() {
+		// Arrange
+		Award award = new Award();
+		Actor actor = new Actor();
+		when(actorRepo.findOne(1L)).thenReturn(actor);
+
+		// Act
+		Actor actual = controller.create(1L, award);
+
+		// Assert
+		assertThat(actual).isSameAs(actor);
+		verify(awardRepo).save(award);
+		verify(actorRepo).findOne(1L);
+	}
 }
