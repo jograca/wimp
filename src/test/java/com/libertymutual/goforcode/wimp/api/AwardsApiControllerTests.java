@@ -61,17 +61,23 @@ public class AwardsApiControllerTests {
 	// create_associates_the_award_with_an_actor_saves_the_award_and_actor_and_returns_actor()
 	// {
 	// // Arrange
+	// Actor actor = new Actor();
+	// // Set a blank Array of Awards
+	// actor.setAwards(new ArrayList<Award>());
 	// Award award = new Award();
 	// when(awardRepo.findOne(1L)).thenReturn(award);
-	// Actor actor = new Actor();
 	// when(actorRepo.findOne(2L)).thenReturn(actor);
 	//
 	// // Act
-	// Actor actual = controller.create(1L, award);
+	// Actor actual = controller.create(2L, award);
 	//
 	// // Assert
 	// assertThat(actual).isSameAs(actor);
-	// verify(awardRepo).findOne(1L);
-	// verify(actorRepo.findOne(2L).getAwards().contains(controller.getOne(1L)));
+	// verify(award.getActor().equals(actor));
+	//
+	// // assertThat(actor.getAwards()).contains(award);
+	//
+	// // verify(awardRepo).findOne(1L);
+	// // verify(actorRepo.findOne(2L).getAwards().contains(controller.getOne(1L)));
 	// }
 }

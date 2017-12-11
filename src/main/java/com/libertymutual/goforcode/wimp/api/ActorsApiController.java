@@ -43,7 +43,6 @@ public class ActorsApiController {
 	@ResponseStatus(code = HttpStatus.OK)
 	public ActorView getOne(@PathVariable Long id) {
 		Actor actor = actorRepo.findOne(id);
-
 		return new ActorView(actor);
 	}
 
@@ -54,17 +53,15 @@ public class ActorsApiController {
 	}
 
 	@PutMapping("{id}")
-	@ResponseStatus(code = HttpStatus.OK)
 	public Actor update(@RequestBody Actor actor, @PathVariable Long id) {
 		actor.setId(id);
 		return actorRepo.save(actor);
 	}
 
 	@DeleteMapping("{id}")
-	@ResponseStatus(code = HttpStatus.OK)
 	public Actor delete(@PathVariable Long id) {
 		Actor actor = actorRepo.findOne(id);
-		actorRepo.delete(actor);
+		actorRepo.delete(id);
 		return actor;
 	}
 }
