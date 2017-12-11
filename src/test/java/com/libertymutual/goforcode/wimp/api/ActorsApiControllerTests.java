@@ -48,24 +48,28 @@ public class ActorsApiControllerTests {
 	public void getOne_with_valid_id_returns_single_actor() {
 		// Arrange
 		Actor actor = new Actor();
-		ActorView av = new ActorView(actor);
 		when(actorRepo.findOne(1L)).thenReturn(actor);
 
 		// Act
 		ActorView actual = controller.getOne(1L);
 
 		// Assert
-		assertThat(av).isSameAs(actual);
+		assertThat(actor.getId() == (actual.getId()));
 		verify(actorRepo).save(actor);
 	}
 
 	@Test
 	public void getOne_with_an_invalid_id_returns_an_actor() {
 		// Arrange
+		when(actorRepo.findOne(1L)).thenReturn(null);
 
 		// Act
+		ActorView actual = controller.getOne(1L);
 
 		// Assert
+		assertThat(actual).isNull();
+		verify(actorRepo).findOne(1L);
+
 	}
 
 	@Test
