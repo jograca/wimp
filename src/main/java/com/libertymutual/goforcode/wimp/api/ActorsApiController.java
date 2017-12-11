@@ -42,8 +42,12 @@ public class ActorsApiController {
 	@GetMapping("{id}")
 	@ResponseStatus(code = HttpStatus.OK)
 	public ActorView getOne(@PathVariable Long id) {
+		ActorView av = null;
 		Actor actor = actorRepo.findOne(id);
-		return new ActorView(actor);
+		if (actor != null) {
+			av = new ActorView(actor);
+		}
+		return av;
 	}
 
 	@PostMapping("")
