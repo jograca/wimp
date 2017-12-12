@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -26,8 +28,21 @@ public class ActorsApiControllerTests {
 	}
 
 	@Test
-	public void getAll() {
+	public void getAll_returns_list_of_all_actors_in_actorview() {
+		// Arrange
+		ArrayList<Actor> actors = new ArrayList<Actor>();
+		Actor actor = new Actor();
 
+		actor.setId(1L);
+		actors.add(actor);
+		when(actorRepo.findAll()).thenReturn(actors);
+
+		// Act
+		ActorView actual = controller.getAll().get(0);
+
+		// Assert
+		assertThat(actual.getId()).isEqualTo(1L);
+		verify(actorRepo).findAll();
 	}
 
 	@Test
