@@ -1,7 +1,6 @@
 package com.libertymutual.goforcode.wimp.api;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -10,6 +9,8 @@ import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import com.libertymutual.goforcode.wimp.models.Movie;
 import com.libertymutual.goforcode.wimp.services.MovieRepository;
@@ -17,11 +18,13 @@ import com.libertymutual.goforcode.wimp.services.MovieRepository;
 public class MoviesApiControllerTests {
 
 	private MoviesApiController controller;
+
+	@Mock
 	private MovieRepository movieRepo;
 
 	@Before
 	public void setup() {
-		movieRepo = mock(MovieRepository.class);
+		MockitoAnnotations.initMocks(this);
 		controller = new MoviesApiController(movieRepo);
 	}
 
