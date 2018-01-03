@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.libertymutual.goforcode.wimp.models.Actor;
 import com.libertymutual.goforcode.wimp.models.Movie;
 import com.libertymutual.goforcode.wimp.services.ActorRepository;
@@ -31,6 +32,7 @@ public class StarsApiController {
 		return actorRepo.findOne(id);
 	}
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	@PostMapping("")
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public Movie create(@PathVariable Long movieId, @RequestBody Long actorId) {
