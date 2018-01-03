@@ -14,7 +14,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -42,7 +41,6 @@ public class Actor {
 	@Column(nullable = true)
 	private Long activeSinceYear;
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	@Column(nullable = true)
 	private Date birthDate;
 

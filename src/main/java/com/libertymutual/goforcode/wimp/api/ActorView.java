@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.libertymutual.goforcode.wimp.models.Actor;
 import com.libertymutual.goforcode.wimp.models.Award;
 import com.libertymutual.goforcode.wimp.models.Movie;
@@ -33,7 +32,6 @@ public class ActorView {
 		return actor.getActiveSinceYear();
 	}
 
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	public Date getBirthDate() {
 		return actor.getBirthDate();
 	}
