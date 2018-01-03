@@ -49,3 +49,7 @@ Here's what Heroku does (I think)
 * Takes your container and deploys it to their ecosystem
 * Your container is considered ephemeral, and will be removed by Heroku if not in active use (A Good Thing). There are probably overrides or whatever
 * The Container Ecosystem Heroku uses deploys your container to their service running on an AWS EC2 instance
+
+#### Travis-CI
+
+Setup with Travis CI Automation
