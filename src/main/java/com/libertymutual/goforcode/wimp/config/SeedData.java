@@ -16,15 +16,15 @@ public class SeedData {
 
 	public SeedData(ActorRepository actorRepo, MovieRepository movieRepo, AwardRepository awardRepo) {
 
-		actorRepo.save(new Actor("Jack", "Black", (long) 1982, new Date(481911998)));
-		actorRepo.save(new Actor("John", "Cusack", (long) 1983, new Date(481911998)));
-		actorRepo.save(new Actor("Catherine", "Zeta-Jones", (long) 1995, new Date(481911998)));
-		actorRepo.save(new Actor("Iben", "Hjejle", (long) 1992, new Date(481911998)));
-		actorRepo.save(new Actor("Joan", "Cusack", (long) 1979, new Date(481911998)));
+		actorRepo.save(new Actor("Jack", "Black", (long) 1982, new Date(481911998L)));
+		actorRepo.save(new Actor("John", "Cusack", (long) 1983, new Date(481911998L)));
+		actorRepo.save(new Actor("Catherine", "Zeta-Jones", (long) 1995, new Date(481911998L)));
+		actorRepo.save(new Actor("Iben", "Hjejle", (long) 1992, new Date(481911998L)));
+		actorRepo.save(new Actor("Joan", "Cusack", (long) 1979, new Date(481911998L)));
 
-		movieRepo.save(new Movie("High Fidelity", new Date(481911998), (long) 30000000, "Touchstone"));
-		movieRepo.save(new Movie("Coyote Ugly", new Date(481911998), (long) 45000000, "Touchstone"));
-		movieRepo.save(new Movie("The Muppet Movie", new Date(481911998), null, "ITC Films"));
+		movieRepo.save(new Movie("High Fidelity", new Date(481911998L), (long) 30000000, "Touchstone"));
+		movieRepo.save(new Movie("Coyote Ugly", new Date(481911998L), (long) 45000000, "Touchstone"));
+		movieRepo.save(new Movie("The Muppet Movie", new Date(481911998L), null, "ITC Films"));
 
 		awardRepo.save(new Award("Emmy", "The Academy", 1997));
 		awardRepo.save(new Award("Golden Globe", "The Academy", 1997));
