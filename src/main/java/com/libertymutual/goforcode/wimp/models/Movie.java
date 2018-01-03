@@ -13,6 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "movie")
 public class Movie {
@@ -28,6 +30,7 @@ public class Movie {
 	@Column(length = 300, nullable = false)
 	private String title;
 
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	@Column(nullable = true)
 	private Date releaseDate;
 
