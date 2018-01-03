@@ -2,7 +2,6 @@ package com.libertymutual.goforcode.wimp.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +20,7 @@ public class Award {
 	@SequenceGenerator(name = "award_id_seq", sequenceName = "award_id_seq")
 	private Long id;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JsonIgnore
 	private Actor actor;
 

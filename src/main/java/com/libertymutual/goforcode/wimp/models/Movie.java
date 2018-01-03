@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +21,7 @@ public class Movie {
 	@SequenceGenerator(name = "movie_id_seq", sequenceName = "movie_id_seq")
 	private Long id;
 
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany
 	private List<Actor> actors;
 
 	@Column(length = 300, nullable = false)
