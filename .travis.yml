@@ -3,3 +3,10 @@ node_js:
 - stable
 script:
 - ng build
+deploy:
+  provider: heroku
+  api_key:
+    secure: VbFC14Eq6NOcE8np/eFH076mNdLO67uj0rctXyQqGkUPIkVfzb4ABDkbXxjbN4iEHGC/HTNOxUyS/GSL5Anq4otNCCg1/Id/k6uH9vRFdnxNrii0qdeWjJdzM4JPxByQo/8YBd6jOovkkgNEZoJuLlfEPyXO1qj+9DSn7Hgcv7RjBDRGulC/4DPQy59SbJbfcm3PVtFfc2W8WghizD+iStIdgt2vePYzGwZuToqiUu7vzNRIPfUgSgBTJeXJbCQQZ2WUlLyZWuaGAHZ0bYexDcGYWKvd77u5RjHO2u5I3BFORq7/xQpZ5UQyjAI1yc53RMlQ3B9xsgVjWHAlfOmQ7clCb/vlR6ei/KiYWC5FW3HfAZIn5CCvmPeesOWcvvwnPp6xDCR6NDKXfyFZMM4mn6gCjR0L9EkPOtfDqNdYfv1OO1dLClc/JOChMEHpLNjlj0UQCGvc5Ii4piO9iMUp25N36PeOYTCsYy3h/8uxueYqBSU/97N82bRXInkuKxH/3nbbx9q43AGpt/iYZ6JO6FBofrIu/c5cF+JX5pLBaS7a/m7C0jBSH2e3R4NPQff1PMJyQY0+JX753NDZSgeh/OgRtV+l/HQ4HZK3lZUQ/eT+Mu9p4fkqakRkmSoFwYtDlkPdgnyGG2cl8s0CzURQ8Q6CVBuDHic7gQGfQjICIKc=
+  app: wimp-app-jon-g4c-indy-nov
+  on:
+    repo: jograca/wimp
