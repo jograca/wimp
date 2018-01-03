@@ -1,8 +1,8 @@
-language: node_js
-node_js:
-- stable
-script:
-- ng build
+language: java
+services:
+- postgresql
+before_script:
+- psql -c 'create database invoicify;' -U postgres
 deploy:
   provider: heroku
   api_key:
