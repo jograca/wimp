@@ -24,7 +24,7 @@ public class SeedData {
 
 		movieRepo.save(new Movie("High Fidelity", new Date(1421893256000L), (long) 30000000, "Touchstone"));
 		movieRepo.save(new Movie("Coyote Ugly", new Date(1421893256000L), (long) 45000000, "Touchstone"));
-		movieRepo.save(new Movie("The Muppet Movie", new Date(1421893256000Lœ), null, "ITC Films"));
+		movieRepo.save(new Movie("The Muppet Movie", new Date(1421893256000L), null, "ITC Films"));
 
 		awardRepo.save(new Award("Emmy", "The Academy", 1997));
 		awardRepo.save(new Award("Golden Globe", "The Academy", 1997));
