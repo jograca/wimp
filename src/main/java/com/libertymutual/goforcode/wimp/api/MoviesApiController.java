@@ -3,6 +3,7 @@ package com.libertymutual.goforcode.wimp.api;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import com.libertymutual.goforcode.wimp.services.MovieRepository;
 
 @RestController
 @RequestMapping("/api/movies")
+@CrossOrigin(origins = "*")
 public class MoviesApiController {
 
 	private MovieRepository movieRepo;
