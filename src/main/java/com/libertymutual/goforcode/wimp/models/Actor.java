@@ -25,7 +25,7 @@ public class Actor {
 	@SequenceGenerator(name = "actor_id_seq", sequenceName = "actor_id_seq")
 	private Long id;
 
-	@ManyToMany(mappedBy = "actors")
+	@ManyToMany(mappedBy = "actors", fetch = FetchType.EAGER)
 	@JsonIgnore
 	private List<Movie> movies;
 
