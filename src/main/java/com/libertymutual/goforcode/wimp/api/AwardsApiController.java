@@ -1,5 +1,7 @@
 package com.libertymutual.goforcode.wimp.api;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +26,12 @@ public class AwardsApiController {
 	public AwardsApiController(AwardRepository awardRepo, ActorRepository actorRepo) {
 		this.awardRepo = awardRepo;
 		this.actorRepo = actorRepo;
+	}
+
+	@GetMapping("")
+	@ResponseStatus(code = HttpStatus.OK)
+	public List<Award> getAll() {
+		return awardRepo.findAll();
 	}
 
 	@GetMapping("{id}")
