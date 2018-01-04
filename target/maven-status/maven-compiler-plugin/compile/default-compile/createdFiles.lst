@@ -1,0 +1,16 @@
+com/libertymutual/goforcode/wimp/api/MoviesApiController.class
+com/libertymutual/goforcode/wimp/api/StarsApiController.class
+com/libertymutual/goforcode/wimp/api/ActorsApiController.class
+com/libertymutual/goforcode/wimp/api/MovieView.class
+com/libertymutual/goforcode/wimp/models/Award.class
+com/libertymutual/goforcode/wimp/services/AwardRepository.class
+com/libertymutual/goforcode/wimp/models/Actor.class
+com/libertymutual/goforcode/wimp/config/WebConfig.class
+com/libertymutual/goforcode/wimp/api/ActorView.class
+com/libertymutual/goforcode/wimp/services/MovieRepository.class
+com/libertymutual/goforcode/wimp/config/SeedData.class
+com/libertymutual/goforcode/wimp/models/Movie.class
+com/libertymutual/goforcode/wimp/WimpApplication.class
+com/libertymutual/goforcode/wimp/api/AwardView.class
+com/libertymutual/goforcode/wimp/api/AwardsApiController.class
+com/libertymutual/goforcode/wimp/services/ActorRepository.class

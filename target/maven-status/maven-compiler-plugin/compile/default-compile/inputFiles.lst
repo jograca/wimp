@@ -10,8 +10,8 @@
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/models/Award.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/WimpApplication.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/api/StarsApiController.java
-/Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/configuration/SwaggerConfig.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/api/MovieView.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/services/AwardRepository.java
+/Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/config/SwaggerConfig.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/api/ActorView.java
 /Users/jograca/Documents/dev/wimp/src/main/java/com/libertymutual/goforcode/wimp/api/MoviesApiController.java
