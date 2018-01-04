@@ -3,6 +3,8 @@ package com.libertymutual.goforcode.wimp.api;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +20,7 @@ import com.libertymutual.goforcode.wimp.services.AwardRepository;
 
 @RestController
 @RequestMapping("/api/actors/{actorId}/awards")
+@CrossOrigin(origins = "*")
 public class AwardsApiController {
 
 	private AwardRepository awardRepo;
@@ -48,5 +51,12 @@ public class AwardsApiController {
 		actorRepo.save(actor);
 
 		return actor;
+	}
+
+	@DeleteMapping("{id}")
+	public Award delete(@PathVariable Long id) {
+		Award award = awardRepo.findOne(id);
+		awardRepo.delete(id);
+		return award;
 	}
 }
