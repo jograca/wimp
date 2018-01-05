@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.libertymutual.goforcode.wimp.models.Actor;
 import com.libertymutual.goforcode.wimp.services.ActorRepository;
+import com.libertymutual.goforcode.wimp.services.AwardRepository;
 
 @RestController
 @RequestMapping("/api/actors")
@@ -24,9 +25,11 @@ import com.libertymutual.goforcode.wimp.services.ActorRepository;
 public class ActorsApiController {
 
 	private ActorRepository actorRepo;
+	private AwardRepository awardRepo;
 
-	public ActorsApiController(ActorRepository actorRepo) {
+	public ActorsApiController(ActorRepository actorRepo, AwardRepository awardRepo) {
 		this.actorRepo = actorRepo;
+		this.awardRepo = awardRepo;
 	}
 
 	@GetMapping("")
@@ -67,6 +70,7 @@ public class ActorsApiController {
 	@DeleteMapping("{id}")
 	public Actor delete(@PathVariable Long id) {
 		Actor actor = actorRepo.findOne(id);
+		awardRepo.delete(awardRepo.findByActorId(id));
 		actorRepo.delete(id);
 		return actor;
 	}
