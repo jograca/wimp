@@ -13,6 +13,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "movie")
 public class Movie {
@@ -29,6 +31,7 @@ public class Movie {
 	private String title;
 
 	@Column(nullable = true)
+	@JsonFormat(timezone = "EST")
 	private Date releaseDate;
 
 	@Column(nullable = true)
